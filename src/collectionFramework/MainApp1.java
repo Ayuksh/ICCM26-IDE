@@ -15,7 +15,6 @@ public class MainApp1 {
         }
 
 
-
         System.out.println("ELEMENT INSIDE ARRAYLIST :");
         for (Integer i : arr)
             System.out.println(i);
