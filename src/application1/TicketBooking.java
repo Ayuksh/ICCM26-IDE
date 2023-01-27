@@ -20,8 +20,12 @@ public class TicketBooking {
 
     public void cancelTicket( int qty )
     {
-        ticketCount += qty ;
-        displayTicket();
+        if (ticketCount!=100 )
+        {
+            ticketCount += qty ;
+            displayTicket();
+        }else
+            throw new CancelTicket();
     }
 
     public void displayTicket()
