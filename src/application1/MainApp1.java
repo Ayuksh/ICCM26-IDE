@@ -3,9 +3,10 @@ package application1;
 import java.util.Scanner;
 
 public class MainApp1 {
+    static Scanner sc = new Scanner(System.in);
+    static TicketBooking t1 = new TicketBooking() ;
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        TicketBooking t1 = new TicketBooking() ;
+
         int qty = 0 ;
         boolean status = true ;
         do {
@@ -19,10 +20,7 @@ public class MainApp1 {
             switch (ch)
             {
                 case 1 :
-                    System.out.println("ENTER TICKET COUNT : ");
-                    qty = sc.nextInt();
-                    t1.bookTicket(qty);
-                    System.out.println("-------------------------------------");
+                        bookTicket();
                     break;
                 case 2 :
                     System.out.println("ENTER CANCEL TICKET COUNT : ");
@@ -49,4 +47,14 @@ public class MainApp1 {
             }
         }while (status);
     }
+
+    public static void bookTicket()
+    {
+        System.out.println("ENTER TICKET COUNT : ");
+        int qty = sc.nextInt();
+        t1.bookTicket(qty);
+        System.out.println("-------------------------------------");
+    }
+
+
 }
